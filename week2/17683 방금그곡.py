@@ -1,7 +1,8 @@
 # result
-#   correctness: 36.7 (time over)
+#   correctness: 100.0
 # approach
 #   재생된 시간 만큼 sheet의 길이를 줄이거나 반복하며 늘림
+#   -> 문자열 슬라이싱과 *, + 연산으로 빠르게 조정
 #   m이 조정한 sheet에 존재하는지 확인
 
 
@@ -35,8 +36,7 @@ def solution(m, musicinfos):
             sheet = sheet[:playtime]
         elif playtime > los:
             gap = playtime - los
-            for _ in range(gap // los):
-                sheet += sheet
+            sheet += sheet * (gap // los)
             sheet += sheet[:gap % los]
 
         if m in sheet and playtime > max_playtime:
