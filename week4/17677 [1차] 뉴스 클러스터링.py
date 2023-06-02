@@ -1,6 +1,6 @@
 # result
 #     correctness 100.0
-#     runtime: 0.02~0.17ms, 0.85ms
+#     runtime: 0.02~0.16ms, 1.39ms
 # key
 #     다중집합의 교집합 -> dictionary로 카운팅해서 세기
 #     딕셔너리의 get 메소드 활용하여 에러 없이 교집합 검사
@@ -37,9 +37,6 @@ def solution(str1, str2):
                 union += 1
             union += jset1[k]
             jset1[k] = 0
-            if jset2.get(k, 0) != 0:
-                union += jset2[k]
-                jset2[k] = 0
 
         for k in jset2:
             if jset2[k] != 0:
