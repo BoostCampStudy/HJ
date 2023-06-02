@@ -1,10 +1,10 @@
-result
-    correctness: 100.0
-    runtime: 0.01~21.35ms
-key
-    큰 스테이지부터 시작해, 앞선 스테이지에 머물러 있는 사람을 현재에 누적해 1번만 반복하도록
-    dictionary 정렬
-    zip 함수
+# result
+#     correctness: 100.0
+#     runtime: 0.01~21.35ms
+# key
+#     큰 스테이지부터 시작해, 앞선 스테이지에 머물러 있는 사람을 현재에 누적해 1번만 반복하도록
+#     dictionary 정렬
+#     zip 함수
 
 def solution(N, stages):
     reached = [0 for i in range(N + 1)]
