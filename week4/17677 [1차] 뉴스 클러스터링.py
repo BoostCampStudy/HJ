@@ -6,6 +6,7 @@
 #     딕셔너리의 get 메소드 활용하여 에러 없이 교집합 검사
 #     <- 딕셔너리를 loop할 때는, del 키워드 사용 불가 (루프 중 딕셔너리 길이 변화가 생기면 안 됨)
 #     jset을 만들면서 keys 배열을 만들면 del을 써도 될 것 같은데?
+#     해봤는데 해싱하고 검사하는 것 때문에 더 느림
 
 def get_jset(string, jset):
     for i in range(len(string) - 1):
