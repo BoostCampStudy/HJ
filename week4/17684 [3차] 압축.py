@@ -1,6 +1,6 @@
 # result
 #     correctness: 100.0
-#     runtime: 0.01~0.59m
+#     runtime: 0.01~0.71m
 # key
 #     중간에 입력 문자열의 삭제가 발생하므로 for문보단 while로 반복
 #     i & j의 종료 조건
