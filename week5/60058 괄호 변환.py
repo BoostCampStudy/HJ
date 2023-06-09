@@ -1,8 +1,9 @@
 # result
 #     correctness: 100.0
-#     runtime: 0.01~0.30ms
+#     runtime: 0.01~0.48ms
 # key
 #     Nonetype은 packing return 불가능
+#     간단한 for 반복은 map과 lambda 고민해보기
 
 def get_uv(w):
     ocnt = ccnt = 0
@@ -14,6 +15,7 @@ def get_uv(w):
 
         if i != 0 and ocnt == ccnt:
             return w[:i + 1], w[i + 1:]
+
 
 def is_correct(u):
     n = 0
@@ -27,6 +29,7 @@ def is_correct(u):
 
     return True
 
+
 def solution(p):
     if p == "":
         return p
@@ -35,10 +38,5 @@ def solution(p):
 
     if is_correct(u):
         return u + solution(v)
-
     else:
-        reverse = ''
-        for i in range(1, len(u) - 1):
-            reverse += '(' if u[i] == ')' else ')'
-
-        return '(' + solution(v) + ')' + reverse
+        return '(' + solution(v) + ')' + "".join(map(lambda x: ')' if x == '(' else '(', u[1:-1]))
